@@ -27,7 +27,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
 
         // Set the text view as the activity layout
         setContentView(textView);
-
+// this should work
 
 
     }
