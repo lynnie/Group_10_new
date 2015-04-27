@@ -6,17 +6,33 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.GridView;
+import android.widget.Toast;
+
+import static android.widget.AdapterView.OnItemClickListener;
 
 
-public class MyActivity extends ActionBarActivity {
+public class HelloGridView extends ActionBarActivity {
     public final static String EXTRA_MESSAGE ="com.mycompany.myfirstapp.MESSAGE";
 
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
+        setContentView(R.layout.main);
+
+        GridView gridview = (GridView) findViewById(R.id.gridview);
+        gridview.setAdapter(new ImageAdapter(this));
+
+        gridview.setOnItemClickListener(new OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+                Toast.makeText(HelloGridView.this, "" + position,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
@@ -42,14 +58,5 @@ public class MyActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void sendMessage(View view){
 
-        Intent intent = new Intent (this,DisplayMessageActivity.class);
-
-        EditText editText = (EditText)findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-
-    }
 }
