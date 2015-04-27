@@ -2,9 +2,14 @@
     <string name="app_name">My First App</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="button_poker">Play Poker</string>
+    <string name="button_deck_one">Deck 1</string>
+    <string name="button_deck_two">Deck 2</string>
+    <string name="button_deck_three">Deck 3</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_display_deck">DisplayDeckActivity</string>
 </resources>
