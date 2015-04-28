@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class DisplayDeckActivity extends ActionBarActivity {
+public class DisplaySelectDeckActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class DisplayDeckActivity extends ActionBarActivity {
     /*
     Add window here.
      */
-        Intent intent = new Intent (this,DisplayDeckActivity.class);
+        Intent intent = new Intent (this,DisplaySelectDeckActivity.class);
         startActivity(intent);
 
     }
@@ -50,7 +50,7 @@ public class DisplayDeckActivity extends ActionBarActivity {
     /*
     Add window here.
      */
-        Intent intent = new Intent (this,DisplayDeckActivity.class);
+        Intent intent = new Intent (this,DisplaySelectDeckActivity.class);
         startActivity(intent);
 
     }
@@ -59,7 +59,7 @@ public class DisplayDeckActivity extends ActionBarActivity {
     /*
     Add window here.
      */
-        Intent intent = new Intent (this,DisplayDeckActivity.class);
+        Intent intent = new Intent (this,DisplaySelectDeckActivity.class);
         startActivity(intent);
 
     }

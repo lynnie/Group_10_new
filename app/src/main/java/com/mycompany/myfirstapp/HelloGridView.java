@@ -52,4 +52,8 @@ public class HelloGridView extends ActionBarActivity {
         startActivity(intent);
 
     }
+    public void displaySelectDeckOfCards(View view) {
+        Intent intent = new Intent(this, DisplaySelectDeckActivity.class);
+        startActivity(intent);
+    }
 }
