@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 
-public class MyActivity extends ActionBarActivity {
+public class HelloGridView extends ActionBarActivity {
     public final static String EXTRA_MESSAGE ="com.mycompany.myfirstapp.MESSAGE";
 
     @Override
