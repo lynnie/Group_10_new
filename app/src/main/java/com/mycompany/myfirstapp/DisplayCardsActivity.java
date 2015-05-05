@@ -1,45 +1,34 @@
 package com.mycompany.myfirstapp;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Toast;
 
 import static android.widget.AdapterView.OnItemClickListener;
 
 
-public class SelectCardActivity extends ActionBarActivity {
-    public final static String EXTRA_MESSAGE ="com.mycompany.myfirstapp.MESSAGE";
+public class DisplayCardsActivity extends ActionBarActivity {
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
 
-        GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(this));
+        Bundle b = getIntent().getExtras();
+        int value = b.getInt("layout");
 
-        gridview.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v,
-                                    int position, long id) {
-                Toast.makeText(SelectCardActivity.this, "" + position,
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
+        setContentView(value);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_my, menu);
+        getMenuInflater().inflate(R.menu.menu_display_deck, menu);
         return true;
     }
 
@@ -57,6 +46,4 @@ public class SelectCardActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }
