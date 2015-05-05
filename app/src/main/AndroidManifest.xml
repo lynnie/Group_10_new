@@ -33,16 +33,8 @@
                 android:value="com.mycompany.myfirstapp.HelloGridView" />
         </activity>
         <activity
-            android:name=".ImageAdapter"
-            android:label="@string/title_activity_display_deck"
-            android:parentActivityName=".HelloGridView" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mycompany.myfirstapp.HelloGridView" />
-        </activity>
-        <activity
-            android:name=".SelectCardActivity"
-            android:label="@string/title_activity_select_card"
+            android:name=".DisplayCardsActivity"
+            android:label="@string/title_activity_display_cards"
             android:parentActivityName=".DisplaySelectDeckActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

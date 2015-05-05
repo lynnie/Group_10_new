@@ -38,29 +38,31 @@ public class DisplaySelectDeckActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public void displayDeckOne(View view){
+    public void displayDeckNormal(View view){
     /*
     Add window here.
      */
-        Intent intent = new Intent (this,SelectCardActivity.class);
-        startActivity(intent);
-
+        displayDeck(view, R.layout.activity_display_normal_cards);
     }
-    public void displayDeckTwo(View view){
+    public void displayDeckFibonacci(View view){
     /*
     Add window here.
      */
-        Intent intent = new Intent (this,DisplaySelectDeckActivity.class);
-        startActivity(intent);
-
+        displayDeck(view, R.layout.activity_display_fibonacci_cards);
     }
 
-    public void displayDeckThree(View view){
+    public void displayDeckTShirt(View view){
     /*
     Add window here.
      */
-        Intent intent = new Intent (this,DisplaySelectDeckActivity.class);
-        startActivity(intent);
+        displayDeck(view, R.layout.activity_display_tshirt_cards);
+    }
 
+    private void displayDeck(View view, int layout) {
+        Intent intent = new Intent (this,DisplayCardsActivity.class);
+        Bundle b = new Bundle();
+        b.putInt("layout", layout);
+        intent.putExtras(b);
+        startActivity(intent);
     }
 }
