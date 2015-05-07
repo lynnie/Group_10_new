@@ -4,24 +4,21 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.Toast;
-
-import static android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
-public class DisplayCardsActivity extends ActionBarActivity {
+public class DisplayFibonacciOneCardActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_display_one_card);
 
         Bundle b = getIntent().getExtras();
-        int value = b.getInt("layout");
-
-        setContentView(value);
+        String value = b.getString("key");
+        ImageView iView = (ImageView) findViewById(R.id.display_selected_card);
+        iView.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("drawable/"+value, null, getPackageName())));
     }
 
 
