@@ -1,19 +1,24 @@
 package com.mycompany.myfirstapp;
 
-import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
-public class DisplaySelectDeckActivity extends ActionBarActivity {
+public class DisplayTShirtOneCardActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_deck);
+        setContentView(R.layout.activity_display_one_card);
+
+        Bundle b = getIntent().getExtras();
+        String value = b.getString("key");
+        ImageView iView = (ImageView) findViewById(R.id.display_selected_card);
+        iView.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("drawable/" + value, null, getPackageName())));
     }
 
 
@@ -37,27 +42,5 @@ public class DisplaySelectDeckActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-    public void displayDeckNormal(View view){
-    /*
-    Add window here.
-     */
-        Intent intent = new Intent (this,DisplayNormalCardsActivity.class);
-        startActivity(intent);
-    }
-    public void displayDeckFibonacci(View view){
-    /*
-    Add window here.
-     */
-        Intent intent = new Intent (this,DisplayFibonacciCardsActivity.class);
-        startActivity(intent);
-    }
-
-    public void displayDeckTShirt(View view){
-    /*
-    Add window here.
-     */
-        Intent intent = new Intent (this,DisplayTShirtCardsActivity.class);
-        startActivity(intent);
     }
 }

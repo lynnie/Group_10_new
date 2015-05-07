@@ -6,41 +6,68 @@
     android:columnCount="4"
     android:orientation="horizontal" >
 
-    <Button
+    <ImageButton
+        android:tag="cxs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_ts_xs" />
-    <Button
+        android:background="@null"
+        android:src="@drawable/cxs_"
+        android:onClick="displayCard"/>
+    <ImageButton
+        android:tag="cs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_ts_s" />
-    <Button
+        android:background="@null"
+        android:src="@drawable/cs_"
+        android:onClick="displayCard"/>
+    <ImageButton
+        android:tag="cm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_ts_m" />
-    <Button
+        android:background="@null"
+        android:src="@drawable/cm_"
+        android:onClick="displayCard"/>
+    <ImageButton
+        android:tag="cl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_ts_l" />
-    <Button
+        android:background="@null"
+        android:src="@drawable/cl_"
+        android:onClick="displayCard"/>
+    <ImageButton
+        android:tag="cxl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_ts_xl" />
-    <Button
+        android:background="@null"
+        android:src="@drawable/cxl_"
+        android:onClick="displayCard"/>
+    <ImageButton
+        android:tag="cxxl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_ts_xxl" />
-    <Button
+        android:background="@null"
+        android:src="@drawable/cxxl_"
+        android:onClick="displayCard"/>
+    <ImageButton
+        android:tag="cinf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_card_inf" />
-    <Button
+        android:background="@null"
+        android:src="@drawable/cinf_"
+        android:onClick="displayCard"/>
+    <ImageButton
+        android:tag="cq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_card_q" />
-    <Button
+        android:background="@null"
+        android:src="@drawable/cq_"
+        android:onClick="displayCard"/>
+    <ImageButton
+        android:tag="ccoffee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_card_coffee" />
+        android:background="@null"
+        android:src="@drawable/ccoffee_"
+        android:onClick="displayCard"/>
     
 </GridLayout>

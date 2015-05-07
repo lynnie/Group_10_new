@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PLANNING POKER</string>
+    <string name="app_name">Planning Poker</string>
     <string name="edit_message">Enter a message</string>
     <string name="github_url">Enter Github url:</string>
     <string name="button_send">Send</string>
@@ -15,7 +15,7 @@
     <color name="magenta">#FF00FF</color>
 
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_display_deck">DisplayDeckActivity</string>
+    <string name="title_activity_display_deck">Select a deck</string>
     <string name="title_activity_display_select_desk">DisplaySelectDeskActivity</string>
     <string name="title_activity_select_card">SelectCardActivity</string>
 

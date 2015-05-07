@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mycompany.myfirstapp" >
-    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -55,6 +55,43 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mycompany.myfirstapp.DisplayEnterGithubActivity" />
+        </activity>
+        <activity
+            android:name=".DisplayFibonacciCardsActivity"
+            android:label="@string/title_activity_display_cards"
+            android:parentActivityName=".DisplaySelectDeckActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mycompany.myfirstapp.DisplaySelectDeckActivity" />
+        </activity>
+        <activity
+            android:name=".DisplayTShirtCardsActivity"
+            android:label="@string/title_activity_display_cards"
+            android:parentActivityName=".DisplaySelectDeckActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mycompany.myfirstapp.DisplaySelectDeckActivity" />
+        </activity>
+        <activity
+            android:name=".DisplayNormalOneCardActivity"
+            android:parentActivityName=".DisplayNormalCardsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayNormalCardsActivity" />
+        </activity>
+        <activity
+            android:name=".DisplayFibonacciOneCardActivity"
+            android:parentActivityName=".DisplayFibonacciCardsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayFibonacciCardsActivity" />
+        </activity>
+        <activity
+            android:name=".DisplayTShirtOneCardActivity"
+            android:parentActivityName=".DisplayTShirtCardsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayTShirtCardsActivity" />
         </activity>
     </application>
 
