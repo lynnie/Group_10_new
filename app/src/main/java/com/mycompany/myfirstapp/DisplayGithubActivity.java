@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 
@@ -15,9 +16,10 @@ public class DisplayGithubActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         String repo = intent.getStringExtra(DisplayEnterGithubActivity.GITHUB_REPO);
-        TextView textView = new TextView(this);
-        textView.setText(repo);
-        setContentView(textView);
+        WebView webview = new WebView(this);
+        setContentView(webview);
+        // for example, https://api.github.com/repos/lynnie/Group_10_new/branches/master
+        webview.loadUrl(repo);
     }
 
 
