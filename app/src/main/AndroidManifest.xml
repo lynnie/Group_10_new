@@ -40,6 +40,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mycompany.myfirstapp.DisplaySelectDeckActivity" />
         </activity>
+        <activity
+            android:name=".DisplayEnterGithubActivity"
+            android:label="@string/title_activity_display_enter_github"
+            android:parentActivityName=".HelloGridView" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mycompany.myfirstapp.HelloGridView" />
+        </activity>
+        <activity
+            android:name=".DisplayGithubActivity"
+            android:label="@string/title_activity_display_github"
+            android:parentActivityName=".DisplayEnterGithubActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mycompany.myfirstapp.DisplayEnterGithubActivity" />
+        </activity>
     </application>
 
 </manifest>

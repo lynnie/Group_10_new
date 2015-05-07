@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">PLANNING POKER</string>
     <string name="edit_message">Enter a message</string>
+    <string name="github_url">Enter Github url:</string>
     <string name="button_send">Send</string>
     <string name="button_poker">Play Poker</string>
+    <string name="button_github">Github</string>
     <string name="button_deck_normal">Standard</string>
     <string name="button_deck_fib">Fibonacci</string>
     <string name="button_deck_tshirt">T-Shirt</string>
@@ -51,5 +53,7 @@
     <string name="button_ts_l">L</string>
     <string name="button_ts_xl">XL</string>
     <string name="button_ts_xxl">XXL</string>
+    <string name="title_activity_display_enter_github">DisplayEnterGithubActivity</string>
+    <string name="title_activity_display_github">DisplayGithubActivity</string>
 
 </resources>
