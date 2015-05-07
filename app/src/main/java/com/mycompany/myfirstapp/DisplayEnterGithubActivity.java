@@ -51,6 +51,7 @@ public class DisplayEnterGithubActivity extends ActionBarActivity {
         startActivity(intent);
     }
     public String readCommits(String githubURL){
+        githubURL = "https://api.github.com/repos/lynnie/Group_10_new/branches/master";
         return githubURL;
     }
 }

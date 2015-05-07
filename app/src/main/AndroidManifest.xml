@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mycompany.myfirstapp" >
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,7 +33,7 @@
                 android:value="com.mycompany.myfirstapp.HelloGridView" />
         </activity>
         <activity
-            android:name=".DisplayCardsActivity"
+            android:name=".DisplayNormalCardsActivity"
             android:label="@string/title_activity_display_cards"
             android:parentActivityName=".DisplaySelectDeckActivity" >
             <meta-data
