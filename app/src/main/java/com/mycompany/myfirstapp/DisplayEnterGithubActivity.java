@@ -62,10 +62,10 @@ public class DisplayEnterGithubActivity extends ActionBarActivity {
         String username = editText.getText().toString();
         String reposInfo = "https://api.github.com/users/"+username+"/repos?type=all";
 
-        System.out.println(fetchWeb(reposInfo));
+//        System.out.println(fetchWeb(reposInfo));
 
-        //intent.putExtra(GITHUB_REPO, reposInfo);
-        //startActivity(intent);
+        intent.putExtra(GITHUB_REPO, fetchWeb(reposInfo));
+        startActivity(intent);
     }
 
     public String fetchWeb(String url) {

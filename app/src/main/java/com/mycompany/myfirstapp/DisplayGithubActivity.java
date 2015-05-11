@@ -15,11 +15,14 @@ public class DisplayGithubActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
-        String repo = intent.getStringExtra(DisplayEnterGithubActivity.GITHUB_REPO);
-        WebView webview = new WebView(this);
-        setContentView(webview);
+        String listrepo = intent.getStringExtra(DisplayEnterGithubActivity.GITHUB_REPO);
+        TextView textView = new TextView(this);
+        textView.setText(listrepo);
+        setContentView(textView);
+        // WebView webview = new WebView(this);
+        // setContentView(webview);
         // for example, https://api.github.com/repos/lynnie/Group_10_new/branches/master
-        webview.loadUrl(repo);
+        // webview.loadUrl(repo);
     }
 
 
