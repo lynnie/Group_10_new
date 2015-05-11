@@ -8,6 +8,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 
 public class DisplayEnterGithubActivity extends ActionBarActivity {
 
@@ -43,15 +50,44 @@ public class DisplayEnterGithubActivity extends ActionBarActivity {
     }
 
     public void getGithubRepository(View view) {
+        // Ask [username]
+        // https://api.github.com/users/[username]/repos?type=all
+        // List repos and select from which you'll receive notifications
+        // Create a service that runs and waits for updates
+        // https://api.github.com/users/[username]/received_events
+        // [We have username and repos] Get received events and notify on new events
+
         Intent intent = new Intent(this, DisplayGithubActivity.class);
         EditText editText = (EditText) findViewById(R.id.github_url);
-        String githubURL = editText.getText().toString();
-        String commitInformation = readCommits(githubURL);
-        intent.putExtra(GITHUB_REPO, commitInformation);
-        startActivity(intent);
+        String username = editText.getText().toString();
+        String reposInfo = "https://api.github.com/users/"+username+"/repos?type=all";
+
+        System.out.println(fetchWeb(reposInfo));
+
+        //intent.putExtra(GITHUB_REPO, reposInfo);
+        //startActivity(intent);
     }
-    public String readCommits(String githubURL){
-        githubURL = "https://api.github.com/repos/lynnie/Group_10_new/branches/master";
-        return githubURL;
+
+    public String fetchWeb(String url) {
+        String result = "";
+        DefaultHttpClient http = new DefaultHttpClient();
+        HttpGet get = new HttpGet(url);
+        try {
+            HttpResponse response = http.execute(get);
+            BufferedReader in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+            StringBuffer sb = new StringBuffer("");
+            String line = "";
+            String NL = System.getProperty("line.separator");
+            while ((line = in.readLine()) != null) {
+                sb.append(line + NL);
+            }
+            in.close();
+            result = sb.toString();
+        } catch (Exception e) {
+            result = "";
+        }
+
+        return result;
     }
+
 }

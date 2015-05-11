@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Planning Poker</string>
     <string name="edit_message">Enter a message</string>
-    <string name="github_url">Enter Github url:</string>
-    <string name="button_send">Send</string>
+    <string name="github_url">Github username</string>
+    <string name="button_send">List repositories</string>
     <string name="button_poker">Play Poker</string>
     <string name="button_github">Github</string>
     <string name="button_deck_normal">Standard</string>
