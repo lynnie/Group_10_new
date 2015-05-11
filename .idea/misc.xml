@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_display_enter_github.xml" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_display_github.xml" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_display_message.xml" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_display_normal_cards.xml" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_display_select_deck.xml" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_my.xml" />
   </component>
