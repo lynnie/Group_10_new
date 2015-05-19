@@ -83,7 +83,8 @@ public class CheckUpdatesService extends Service {
 
                 fetchCurrent();
 
-                for (int i = 0; i < 1; i++) {/**********have to change**********/
+                //for (int i = 0; i < 1; i++) {/**********have to change**********/
+                while(true){
                     try {
                         Thread.sleep(5000);
                         checkUpdates();
@@ -97,7 +98,7 @@ public class CheckUpdatesService extends Service {
                 }
 
                 //Stop service once it finishes its task
-                stopSelf();
+                //stopSelf();
             }
         }).start();
 
@@ -197,7 +198,7 @@ public class CheckUpdatesService extends Service {
         try {
             JSONArray jsonArray = new JSONArray(listrepo);
 
-            for(int i = 0; i < 12/*jsonArray.length()*/; i++) {/*************have to change here***********/
+            for(int i = 0; i < jsonArray.length(); i++) {/*************have to change here***********/
                 JSONObject jsonObject = (JSONObject) jsonArray.get(i);
                 if( ((jsonObject.getString("type")).equals("PushEvent")) && !ids.contains(jsonObject.getString("id"))){
                     ids.add(jsonObject.getString("id"));
