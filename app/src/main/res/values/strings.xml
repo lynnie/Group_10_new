@@ -12,6 +12,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
     <string name="title_activity_display_cards">Pick a card</string>
+    <string name="title_github_updates">GitHub Updates</string>
     <color name="magenta">#FF00FF</color>
 
     <string name="hello_world">Hello world!</string>
@@ -55,5 +56,6 @@
     <string name="button_ts_xxl">XXL</string>
     <string name="title_activity_display_enter_github">DisplayEnterGithubActivity</string>
     <string name="title_activity_display_github">DisplayGithubActivity</string>
+    <string name="title_activity_display_updates">DisplayUpdatesActivity</string>
 
 </resources>

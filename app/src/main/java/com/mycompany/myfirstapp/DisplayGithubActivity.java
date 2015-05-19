@@ -8,18 +8,27 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 
 public class DisplayGithubActivity extends ActionBarActivity {
+
+    public static final String GITHUB_REPO = "com.mycompany.myfirstapp.GITHUB_REPO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +46,15 @@ public class DisplayGithubActivity extends ActionBarActivity {
                 final Button button = new Button(this);
                 JSONObject jsonObject = (JSONObject) jsonArray.get(i);
                 button.setText(jsonObject.getString("full_name"));
-                final DisplayGithubActivity displayGithub = this;
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        TextView textView = new TextView(displayGithub);
-                        textView.setText(button.getText());
-                        setContentView(textView);
-//                        Intent intent = new Intent(displayGithub, DisplayEnterGithubActivity.class);
-//                        startActivity(intent);
+                        Intent intent = new Intent(v.getContext(), CheckUpdatesService.class);
+                        String username = ((String)button.getText()).split("/")[0];
+                        String repo=((String)button.getText()).split("/")[1];
+                        intent.putExtra("username",username);
+                        intent.putExtra("repo",repo);
+                        startService(intent);
                     }
                 });
                 layout.addView(button);
@@ -54,10 +63,7 @@ public class DisplayGithubActivity extends ActionBarActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        // WebView webview = new WebView(this);
-        // setContentView(webview);
-        // for example, https://api.github.com/repos/lynnie/Group_10_new/branches/master
-        // webview.loadUrl(repo);
+
     }
 
 
@@ -82,4 +88,8 @@ public class DisplayGithubActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
 }
