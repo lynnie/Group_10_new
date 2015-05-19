@@ -69,6 +69,7 @@ public class CheckUpdatesService extends Service {
 
         Log.i(TAG, "Service onStartCommand");
         username=intent.getStringExtra("username");
+        String chechk="temp";
 
         //Creating new thread for my service
         //Always write your long running tasks in a separate thread, to avoid ANR
