@@ -67,6 +67,30 @@ public class CheckUpdatesService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
+        /*
+        SharedPreferences settings = getSharedPreferences(DisplayGithubActivity.PREFS_NAME, 0);
+        Map<String,?> keys = settings.getAll();
+        ArrayList<String> ids = new ArrayList<String>();
+
+        for(Map.Entry<String,?> entry : keys.entrySet()){
+            if ((boolean)entry.getValue() == false)
+                continue;
+
+            // Check for updates
+            ids.add(entry.getKey());
+        }
+
+        Iterator<String> ids2chk = ids.iterator();
+        while (ids2chk.hasNext()) {
+            // Check to do
+            ids2chk.remove();
+        }
+
+
+
+
+*/
+
         Log.i(TAG, "Service onStartCommand");
         username=intent.getStringExtra("username");
         String chechk="tempo";

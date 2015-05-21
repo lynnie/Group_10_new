@@ -100,9 +100,7 @@
                 android:value=".DisplayTShirtCardsActivity" />
         </activity>
 
-        <service android:name="com.mycompany.myfirstapp.CheckUpdatesService"
-               android:exported="true"
-                android:enabled="true" >
+        <service android:name="com.mycompany.myfirstapp.CheckUpdatesService" >
         </service>
 
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Planning Poker</string>
+    <string name="app_name">Agile G10</string>
     <string name="edit_message">Enter a message</string>
     <string name="github_url">Github username</string>
     <string name="button_send">List repositories</string>
@@ -54,8 +54,8 @@
     <string name="button_ts_l">L</string>
     <string name="button_ts_xl">XL</string>
     <string name="button_ts_xxl">XXL</string>
-    <string name="title_activity_display_enter_github">DisplayEnterGithubActivity</string>
-    <string name="title_activity_display_github">DisplayGithubActivity</string>
+    <string name="title_activity_display_enter_github">Enter git user</string>
+    <string name="title_activity_display_github">Monitor settings</string>
     <string name="title_activity_display_updates">DisplayUpdatesActivity</string>
 
 </resources>
