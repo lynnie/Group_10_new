@@ -26,7 +26,6 @@ public class HelloGridViewTest extends ActivityInstrumentationTestCase2<HelloGri
     protected void setUp() throws Exception{
         super.setUp();
         HelloGridViewActivity = getActivity();
-
     }
 
     public void testDisplayCorrectActivity(){
