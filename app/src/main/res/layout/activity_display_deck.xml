@@ -9,16 +9,19 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/standardButton"
             android:text="@string/button_deck_normal"
             android:onClick="displayDeckNormal" />
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/fibButton"
             android:text="@string/button_deck_fib"
             android:onClick="displayDeckFibonacci" />
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/tshirtButton"
             android:text="@string/button_deck_tshirt"
             android:onClick="displayDeckTShirt" />
 
