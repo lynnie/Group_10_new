@@ -51,7 +51,7 @@ public class DisplayGithubActivity extends ActionBarActivity {
             JSONArray jsonArray = new JSONArray(listrepo);
             GridLayout layout = new GridLayout(this);
             layout.setColumnCount(1);
-            int[] zebra = {Color.rgb(153,204,255), Color.rgb(153,183,255)};
+            int[] zebra = {Color.rgb(0,0,255), Color.rgb(192,4,3)};
 
             GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
 
